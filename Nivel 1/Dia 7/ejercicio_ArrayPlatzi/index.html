@@ -1,0 +1,28 @@
+// CREANDO UNA LISTA DE TAREAS
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        const tareas = [ // creando el array
+            { title:'Lavar cabelo', hour: '5 horas' },
+            { title:'Fazer marmita', hour: 8 },
+            { title:'Ir deitar', hour: 9 },
+
+        ];
+
+        // aquí ForEach irá recorrer el array y añadir al div(id app) los li con los elementos del array
+        const app = document.getElementById('app');
+        tareas.forEach(tareas => {
+            app.innerHTML += `<li>${tareas.title} - ${tareas.hour}</li>`
+        })
+
+    </script>
+</body>
+</html>
